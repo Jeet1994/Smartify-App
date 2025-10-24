@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { NewsCategory } from '../types';
 
@@ -9,7 +8,7 @@ const fetchTopNews = async (): Promise<NewsCategory[]> => {
 
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-  const newsCategories = ["Global Economics", "AI", "Technology", "Oil & Gas", "Finance"];
+  const newsCategories = ["Global Economics", "Finance (specific to India & its stock market)", "AI", "Technology", "Crypto Currencies", "Oil & Gas"];
 
   const prompt = `
     Provide the 3 most important, current top news headlines for each of the following categories: ${newsCategories.join(', ')}.
